@@ -1,0 +1,19 @@
+{
+  "name": "hesiod-website",
+  "version": "1.0.0",
+  "description": "website for hesiod financial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hesiod-Labs/Hesiod-Website.git"
+  },
+  "author": "Daniel Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hesiod-Labs/Hesiod-Website/issues"
+  },
+  "homepage": "https://github.com/Hesiod-Labs/Hesiod-Website#readme"
+}
