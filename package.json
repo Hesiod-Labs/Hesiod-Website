@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hesiod-Labs/Hesiod-Website/issues"
   },
-  "homepage": "https://github.com/Hesiod-Labs/Hesiod-Website#readme"
+  "homepage": "https://github.com/Hesiod-Labs/Hesiod-Website#readme",
+  "dependencies": {
+    "firebase": "^5.5.3"
+  }
 }
