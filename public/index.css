@@ -1,8 +1,14 @@
 body {
   background-color: #eee;
 }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 .about {
   background-color: #000;
+  color: #FFF;
 }
 
 .partners {
