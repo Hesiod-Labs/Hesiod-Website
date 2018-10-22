@@ -7,6 +7,39 @@ section {
   padding-bottom: 100px;
 }
 
+.logo {
+  padding: 10px;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 10px !important;
+  opacity: 0.7;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  margin-top: 1px black;
+}
+
+.nav-item:active {
+  opacity: 1;
+  margin-top: 1px black;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
 .about {
   background-color: #000 !important;
   color: #FFF !important;
@@ -18,4 +51,70 @@ section {
 
 .contact {
   background-color: #eee !important;
+}
+
+.profilePic {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+.partnerRow {
+  text-align: center;
+}
+
+.partnerCol {
+  position: relative;
+  text-align: center;
+  opacity: 1;
+}
+
+.partnerCol:hover {
+  position: relative;
+  text-align: center;
+  opacity: 1;
+  img {
+    opacity: 0.7 !important;
+  }
+  .bio {
+    opacity: 1;
+  }
+}
+
+.partnerCol:hover img {
+  opacity: 0.7 !important;
+}
+
+.partnerCol:hover div {
+  opacity: 1 !important;
+}
+
+.bio {
+  position: absolute;
+  width: 75%;
+  color: white;
+  font-weight: 400;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.partnerName {
+  color: black !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+.partnerName:hover {
+  color: black !important;
+}
+
+.partnerTitle {
+  color: black !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
 }
