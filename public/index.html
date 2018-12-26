@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="kenoby" lang="pt-br">
+<html ng-app="hesiod" lang="en-us">
   <head>
     <meta charset="utf-8">
     <title>Hesiod Financial</title>
@@ -31,8 +31,7 @@
           </div>
           <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5"></div>
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4">
-            <ul class="nav navbar-nav navbar-nav-left">
-              <!--<span><i class="fas fa-bars"></i></span>-->
+            <!--<ul class="nav navbar-nav navbar-nav-left">
               <li class="nav-item">
                 <a href="#about" class="nav-link">About</a>
               </li>
@@ -42,13 +41,23 @@
               <li class="nav-item">
                 <a href="#partners" class="nav-link">Partners</a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a href="#hesiodLabs" class="nav-link">Hesoid Labs</a>
-              </li>-->
+              </li>
               <li class="nav-item">
                 <a href="#contact" class="nav-link">Contact</a>
               </li>
-            </ul>
+            </ul>-->
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#home" onclick="closeNav()">Home</a>
+              <a href="#about" onclick="closeNav()">About</a>
+              <a href="#investmentStrategy" onclick="closeNav()">Strategy</a>
+              <a href="#partners" onclick="closeNav()">Partners</a>
+              <a href="#hesiodLabs" onclick="closeNav()">Hesoid Labs</a>
+              <a href="#contact" onclick="closeNav()">Contact</a>
+            </div>
+            <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
           </div>
         </div>
       </div>
@@ -92,17 +101,6 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
               <h2 align="center">Partners</h2>
               <div class="row partnerRow">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <div class="partnerSection">
-                    <div class="partnerCol">
-                      <img src="/images/daniel.JPG" class="profilePic">
-                      <img src="/images/logo6.png" class="profileLogo">
-                      <div class="bio">Daniel Soares is a current freshman at Colorado College majoring in Computer Science. Daniel is currently broke and would enjoy donations.</div>
-                    </div>
-                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
-                    <a class="partnerTitle">Managing Partner & TMT Portfolio Manager</a>
-                  </div>
-                </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
                   <div class="partnerSection">
                     <div class="partnerCol">
@@ -111,7 +109,7 @@
                       <div class="bio">Victor is a sophomore at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
                     </div>
                     <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
-                    <a class="partnerTitle">CEO & Managing Partner</a>
+                    <a class="partnerTitle">President</a>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
@@ -122,31 +120,42 @@
                       <div class="bio">Tiger is a sophomore at Princeton University majoring in Operations Research and Financial Engineering. In his free time, Tiger enjoys playing football and reading history books. As a founding member of Hesiod Financial, he is able to apply the technical and analytical skills required for a career in finance.</div>
                     </div>
                     <a href="https://www.linkedin.com/in/tiger-chen-693048154" class="partnerName">Tiger Chen</a></br>
-                    <a class="partnerTitle">Managing Partner & M&E Portfolio Manager</a>
+                    <a class="partnerTitle">Vice President & M&E Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <img src="/images/daniel.JPG" class="profilePic">
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current freshman at Colorado College majoring in Computer Science. Daniel is currently broke and would enjoy donations.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">Secretary & TMT Portfolio Manager</a>
                   </div>
                 </div>
               </div>
               <div class="row partnerRow">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <div class="partnerSection">
-                    <div class="partnerCol">
-                      <img src="/images/shaanPatel.jpg" class="profilePic">
-                      <img src="/images/logo6.png" class="profileLogo">
-                      <div class="bio">Shaan is a sophomore at Case Western Reserve University studying Accounting and Computer Science. He was previously involved in the TMT sector of Case Western’s Investment club, and now wants to apply his business and technical skills at Hesiod and an Accounting career.</div>
-                    </div>
-                    <a href="https://www.linkedin.com/in/shaan-patel-a1b190151/" class="partnerName">Shaan Patel</a></br>
-                    <a class="partnerTitle">Managing Partner</a>
-                  </div>
-                </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
                   <div class="partnerSection">
                     <div class="partnerCol">
                       <img src="/images/zainKhawaja.jpeg" class="profilePic">
                       <img src="/images/logo6.png" class="profileLogo">
-                      <div class="bio">Zain is a sophomore at Case Western Reserve University studying Economics. In his free time, Zain can be found conducting cancer research at the Case Western Reserve University School of Medicine. He was introduced to investing at the age of 8 by his father, and began investing when he was 18.</div>
+                      <div class="bio">Zain is a sophomore premedical student at Case Western Reserve University studying economics. He is an options trader, and uses options as an instrument to generate high returns in bear markets. In his free time, Zain can be found conducting cancer research at Case Western Reserve University’s School of Medicine.</div>
                     </div>
                     <a href="https://www.linkedin.com/in/zainkhawaja/" class="partnerName">Zain Khawaja</a></br>
-                    <a class="partnerTitle">Managing Partner</a>
+                    <a class="partnerTitle">Cheif Investment Officer</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <img src="/images/andrew.jpg" class="profilePic">
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Andrew is a sophomore at Case Western Reserve University studying Finance and Economics. He is Series 65 certified and manages his own portfolio of equity and options. Andrew began investing when he was 17.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/andrew-ma-68ab30155/" class="partnerName">Andrew Ma</a></br>
+                    <a class="partnerTitle">Treasurer</a>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
@@ -208,27 +217,42 @@
                     <a class="partnerTitle">Managing Partner</a>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                   <div class="partnerSection">
                     <div class="partnerCol">
-                      <img src="/images/andrew.jpg" class="profilePic">
+                      <img src="/images/shaanPatel.jpg" class="profilePic">
                       <img src="/images/logo6.png" class="profileLogo">
-                      <div class="bio">Andrew is a sophomore at Case Western Reserve University studying Finance and Economics. He is Series 65 certified and manages his own portfolio of equity and options. Andrew began investing when he was 17.</div>
+                      <div class="bio">Shaan is a sophomore at Case Western Reserve University studying Accounting and Computer Science. He was previously involved in the TMT sector of Case Western’s Investment club, and now wants to apply his business and technical skills at Hesiod and an Accounting career.</div>
                     </div>
-                    <a href="" class="partnerName">Andrew Ma</a></br>
+                    <a href="https://www.linkedin.com/in/shaan-patel-a1b190151/" class="partnerName">Shaan Patel</a></br>
                     <a class="partnerTitle">Managing Partner</a>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 partnerCol">
-                  <div class="">
+                  <div class="partnerSection">
                     <div class="partnerCol">
-                      <div class="bio"></div>
+                      <img src="/images/jared.jpeg" class="profilePic">
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Jared is a student at Case Western Reserve University, studying Computer Science and Statistics. He is from Northern Virginia, and is now located in Cleveland, OH. Aside from studies and his role at Hesiod Financial, He also serves as a Staff Writer and Analyst for DailyBasketballAnalysis.com.</div>
                     </div>
-                    <a href="" class="partnerName"></a></br>
-                    <a class="partnerTitle"></a>
+                    <a href="https://www.linkedin.com/in/jared-jacknow/" class="partnerName">Jared Jacknow</a></br>
+                    <a class="partnerTitle">Managing Partner</a>
                   </div>
                 </div>
               </div>
+              <!--<div class="row partnerRow">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <img src="/images/faris.jpeg" class="profilePic">
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Multilingual well-rounded student and finance major, Case Western Reserve University Class of 2022. Interested in investment management. Specialty is day-trading and scalping forex, cryptocurrencies, and stocks with swing-trading experience as well. Trading experience with various strategies, Risk/Reward, and Probability analysis.</div>
+                    </div>
+                    <a href="http://linkedin.com/in/faris-khan123" class="partnerName">Faris Khan</a></br>
+                    <a class="partnerTitle">Managing Partner</a>
+                  </div>
+                </div>
+              </div>-->
 
             </div>
           </div>

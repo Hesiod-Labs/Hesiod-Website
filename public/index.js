@@ -1,3 +1,7 @@
-var element = document.getElementById("contact");
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
-element.scrollIntoView();
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
