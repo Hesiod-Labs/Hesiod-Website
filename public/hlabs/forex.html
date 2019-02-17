@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="hesiod" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hesiod Financial</title>
+    <!-- Created by Daniel Soares -->
+    <link rel="icon" type="image/png" href="/images/logo6.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sectors.css">
+  </head>
+  <body>
+    <script src="/__/firebase/5.5.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-database.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.localscroll.js" type="text/javascript"></script>
+    <script src="jquery.scrollTo.js" type="text/javascript"></script>
+    <script src="luca.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="index.html">
+              <img src="/images/logo3_noWhite.png" class="logo">
+            </a>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5 lucaTitle">
+            <span><i>Luca</i></span>
+            <span><i class="admin">[Admin]</i></span>
+          </div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4 ">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="luca.html" onclick="closeNav()">Home</a>
+              <a href="consumer.html" onclick="closeNav()">Consumer</a>
+              <a href="crypto.html" onclick="closeNav()">Cryptocurrency</a>
+              <a href="csit.html" onclick="closeNav()">CS/IT</a>
+              <a href="forex.html" onclick="closeNav()">Forex</a>
+              <a href="freeCash.html" onclick="closeNav()">Free Cash</a>
+              <a href="healthcare.html" onclick="closeNav()">Healthcare</a>
+              <a href="mei.html" onclick="closeNav()">MEI</a>
+              <a href="options.html" onclick="closeNav()">Options</a>
+              <a href="reit.html" onclick="closeNav()">REIT/FIG</a>
+            </div>
+            <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainContent">
+      <section id="home" class="home">
+        <div>
+          <canvas id="myChart" width="1440" height="400"></canvas>
+          <script>
+          var ctx = document.getElementById("myChart");
+          var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+              datasets: [{
+                  data: [500,550,560,600,700,710,720,750,740,770,800,810],
+                  label: "Portfolio",
+                  borderColor: "#8e5ea2",
+                  fill: false
+                },
+              ]
+            },
+            options: {
+              title: {
+                display: true,
+                text: 'Forex Sector Value ($)'
+              }
+            }
+          });
+          </script>
+        </div>
+      </section>
+      <section>
+        <div class="container requests">
+          <div class="row subheader">
+            <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
+              <div class="subheaderTitle">
+                <h2>Forex Holdings</h2>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <table style="width:100%">
+              <tr>
+                <th>Ticker</th>
+                <th>Bought Date</th>
+                <th>Bought Price</th>
+                <th>Current Price</th>
+                <th>Status</th>
+                <th>Sold Date</th>
+                <th>Sold Price</th>
+                <th>% Gain</th>
+              </tr>
+              <tr>
+                <th>EUR/USD</th>
+                <td>01/17/19</td>
+                <td>$50</td>
+                <td>$51</td>
+                <td>Holding</td>
+                <td></td>
+                <td></td>
+                <td>2%</td>
+              </tr>
+              <tr>
+                <th>USD/JPY</th>
+                <td>01/14/19</td>
+                <td>$10</td>
+                <td>$20</td>
+                <td>Sold</td>
+                <td>01/17/19</td>
+                <td>$20</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <th>GBD/USD</th>
+                <td>01/14/19</td>
+                <td>$5</td>
+                <td>$7</td>
+                <td>Sold</td>
+                <td>01/16/19</td>
+                <td>$7</td>
+                <td>40%</td>
+              </tr>
+
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+
+    </div>
+
+
+  </body>
+</html>
