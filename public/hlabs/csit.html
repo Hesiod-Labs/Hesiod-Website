@@ -63,34 +63,37 @@
           <script>
             window.onload = function () {
 
-            var chart = new CanvasJS.Chart("chartContainer", {
-            	animationEnabled: true,
-            	theme: "light2",
-            	title:{
-            		text: "CS/IT Portfolio History"
-            	},
-            	axisY:{
-            		includeZero: false
-            	},
-            	data: [{
-            		type: "line",
-            		dataPoints: [
-            			{ y: 450 },
-            			{ y: 414},
-            			{ y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
-            			{ y: 460 },
-            			{ y: 450 },
-            			{ y: 500 },
-            			{ y: 480 },
-            			{ y: 480 },
-            			{ y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-            			{ y: 500 },
-            			{ y: 480 },
-            			{ y: 510 }
-            		]
-            	}]
-            });
-            chart.render();
+              var dataPoints = [];
+
+              function getDataPointsFromCSV(csv) {
+                var dataPoints = csvLines = points = [];
+                csvLines = csv.split(/[\r?\n|\r|\n]+/);
+
+                for (var i = 0; i < csvLines.length; i++)
+                  if (csvLines[i].length > 0) {
+                    points = csvLines[i].split(",");
+                    dataPoints.push({
+                      x: parseFloat(points[0]),
+                      y: parseFloat(points[1])
+                    });
+                  }
+                return dataPoints;
+              }
+
+              $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64irmLoTxLYYqlfDtizTK4KilcotAta14TapSWITPhJwy17BqSlPL83maYlPbAgSr37rCSElVXFZk/pubhtml?gid=0&single=true", function(data) {
+                var chart = new CanvasJS.Chart("chartContainer", {
+                  title: {
+                    text: "Chart with Data from Google Sheets",
+                  },
+                  data: [{
+                    type: "line",
+                    dataPoints: getDataPointsFromCSV(data)
+                  }]
+                });
+
+                chart.render();
+
+              });
 
             }
         </script>

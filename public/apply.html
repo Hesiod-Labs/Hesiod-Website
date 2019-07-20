@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="hesiod" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hesiod Financial</title>
+    <!-- Created by Daniel Soares -->
+    <link rel="icon" type="image/png" href="/images/logo6.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <script src="/__/firebase/5.5.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-database.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="jquery.localscroll.js" type="text/javascript"></script>
+    <script src="jquery.scrollTo.js" type="text/javascript"></script>
+    <script src="index.js"></script>
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="index.html">
+              <img src="/images/logo3_noWhite.png" class="logo">
+            </a>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5"></div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="/index.html" onclick="closeNav()">Home</a>
+              <a href="#about" onclick="closeNav()">About</a>
+              <a href="#investmentStrategy" onclick="closeNav()">Strategy</a>
+              <a href="#partners" onclick="closeNav()">Partners</a>
+              <a href="/apply.html" onclick="closeNav()">Apply</a>
+              <a href="#hesiodLabs" onclick="closeNav()">Hesiod Labs</a>
+              <a href="/hlabs/login.html" onclick="closeNav()">Login</a>
+              <a href="/documents.html" onclick="closeNav()">Publications</a>
+              <a href="#contact" onclick="closeNav()">Contact</a>
+            </div>
+            <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainContent">
+      <section id="home" class="home">
+        <div>
+          <picture>
+            <source srcset="/images/mountain.webp" type="image/webp" class="titlePic">
+            <source srcset="/images/mountain.jpg" type="image/jpeg" class="titlePic">
+            <img src="/images/mountain.jpg" class="titlePic">
+          </picture>
+          <div class="homeTitle">Apply</div>
+        </div>
+      </section>
+
+      <section>
+        <form id="test-form">
+
+          <div>
+            <label>First Name</label>
+            <input type="text" name="firstName" placeholder="First Name"/>
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name"/>
+          </div>
+          <div>
+            <label>School</label>
+            <input type="text" name="school" placeholder="Current School"/>
+          </div>
+          <div>
+            <label>Grade</label>
+            <input type="text" name="grade" placeholder="Current Grade"/>
+          </div>
+          <div>
+            <label>Major</label>
+            <input type="text" name="major" placeholder="Major you're pursuing"/>
+          </div>
+          <div>
+            <label>Investment Experience</label>
+            <input type="text" name="investmentExperience" placeholder="Please enter any investment experience that you may have"/>
+          </div>
+          <div>
+            <label>Why do you want to join Hesiod?</label>
+            <input type="text" name="whyDoYouWantToJoin" placeholder="Please enter why you are interested in joining Hesiod Financial"/>
+          </div>
+          <div>
+            <label>LinkedIn</label>
+            <input type="text" name="linkedIn" placeholder="Please add a link to your LinkedIn profile"/>
+          </div>
+
+          <div>
+            <button type="submit"id="submit-form">Submit</button>
+          </div>
+
+        </form>
+      </section>
+
+    </div>
+
+  </body>
+</html>
