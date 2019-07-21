@@ -370,6 +370,14 @@ header .col-lg-4 {
   padding-bottom: 5px;
 }
 
+.applicationFormSuccessMessage {
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
 .applicationFormLabel {
   font-size: 15px;
 }
@@ -382,4 +390,9 @@ header .col-lg-4 {
   font-size: 18px;
   margin-top: 20px;
   width: 100%;
+}
+
+.applicationBackButton {
+  font-size: 18px;
+  margin-top: 20px;
 }

@@ -37,19 +37,7 @@
           </div>
           <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5"></div>
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4">
-            <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="/index.html" onclick="closeNav()">Home</a>
-              <a href="#about" onclick="closeNav()">About</a>
-              <a href="#investmentStrategy" onclick="closeNav()">Strategy</a>
-              <a href="#partners" onclick="closeNav()">Partners</a>
-              <a href="/apply.html" onclick="closeNav()">Apply</a>
-              <a href="#hesiodLabs" onclick="closeNav()">Hesiod Labs</a>
-              <a href="/hlabs/login.html" onclick="closeNav()">Login</a>
-              <a href="/documents.html" onclick="closeNav()">Publications</a>
-              <a href="#contact" onclick="closeNav()">Contact</a>
-            </div>
-            <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
+            <button class="btn btn-primary applicationBackButton pull-right" onclick="window.location.href='/index.html'">Back</button>
           </div>
         </div>
       </div>
@@ -113,11 +101,7 @@
               <label for="resume" class="applicationFormLabel">Import resume:</label>
               <input type="file" class="applicationFormInput" id="resume" name="resume">
             </div>
-            <!-- <div class="btn btn-primary btn-sm float-left">
-              <span>Import resume</span>
-              <input type="file">
-            </div> -->
-            <button type="submit" class="btn btn-success applicationFormButton" id="submit-form">Submit</button>
+            <button type="submit" class="btn btn-success applicationFormButton" id="submit-form" onclick="window.location.href='/success.html'">Submit</button>
           </form>
         </div>
       </section>
