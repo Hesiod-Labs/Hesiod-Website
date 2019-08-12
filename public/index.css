@@ -67,10 +67,12 @@ body {
 }
 
 /* On smaller screens, where width is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media and (max-width: 800px) {
-  .sidenav {padding-top: 15px !important;}
-  .sidenav a {font-size: 18px !important;}
-  p {font-size: 28px !important;}
+@media screen and (max-width: 700px) {
+  .homeTitle {font-size: 75px !important;}
+  .applicationForm {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
 .mainContent {
@@ -366,6 +368,7 @@ header .col-lg-4 {
   text-align: center;
   width: 100%;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .footerCol p {
