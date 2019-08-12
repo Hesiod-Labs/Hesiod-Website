@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html ng-app="hesiod" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hesiod Financial</title>
+    <!-- Created by Daniel Soares -->
+    <link rel="icon" type="image/png" href="/images/logo6.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <script src="/__/firebase/5.5.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-database.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.5.3/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="index.html">
+              <img src="/images/logo3_noWhite.png" class="logo">
+            </a>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5"></div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="/index.html" onclick="closeNav()">Home</a>
+              <a href="/sectors.html" onclick="closeNav()">Sectors</a>
+              <a href="/documents.html" onclick="closeNav()">Publications</a>
+              <a href="/apply.html" onclick="closeNav()">Apply</a>
+              <a href="/fund/login.html" onclick="closeNav()">Login</a>
+            </div>
+            <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainContent">
+      <section id="home" class="home">
+        <div>
+          <picture>
+            <source srcset="/images/mountain.webp" type="image/webp" class="titlePic">
+            <source srcset="/images/mountain.jpg" type="image/jpeg" class="titlePic">
+            <img src="/images/mountain.jpg" class="titlePic">
+          </picture>
+          <div class="homeTitle">Sectors</div>
+        </div>
+      </section>
+
+
+      <!-- CS/IT -->
+      <section id="csit" class="csit">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Communitaction Services & Information Technology</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/daniel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/daniel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/daniel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current sophomore at Colorado College majoring in Computer Science. In his free time, Daniel enjoys coding and mentoring his brother.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/vic.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/vic.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/vic.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Victor is a junior at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/tiger.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/tiger.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/tiger.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Tiger is a junior at Princeton University majoring in Operations Research and Financial Engineering. In his free time, Tiger enjoys playing football and reading history books. As a founding member of Hesiod Financial, he is able to apply the technical and analytical skills required for a career in finance.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/tiger-chen-693048154" class="partnerName">Tiger Chen</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/sungKim.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/sungKim.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/sungKim.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Is an undergrad student at Case Western Reserve University that is majoring in Finance. Was in an investment club since high school and now is an Analyst for the Tech group in Case’s investment club, the Weatherhead Fund. Is also involved in the Weatherhead Economic Society.</div>
+                    </div>
+                    <a href="" class="partnerName">Sung Kim</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- MEI -->
+      <section id="mei" class="mei">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Materials, Energy, & Industrials</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/tiger.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/tiger.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/tiger.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Tiger is a junior at Princeton University majoring in Operations Research and Financial Engineering. In his free time, Tiger enjoys playing football and reading history books. As a founding member of Hesiod Financial, he is able to apply the technical and analytical skills required for a career in finance.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/tiger-chen-693048154" class="partnerName">Tiger Chen</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/daniel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/daniel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/daniel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current sophomore at Colorado College majoring in Computer Science. In his free time, Daniel enjoys coding and mentoring his brother.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/vic.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/vic.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/vic.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Victor is a junior at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- REAL ESTATE -->
+      <section id="reit" class="reit">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Real Estate Investment Trusts & Financial Institution Groups</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/rory.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/rory.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/rory.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Rory is a junior at Case Western Reserve University double majoring in Systems & Control Engineering and Finance. In his free time, Rory enjoys running for the varsity cross country and track and field teams at Case Western, reading, and rooting for all New York sports teams.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rory-owens-a54245149/" class="partnerName">Rory Owens</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/andrew.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/andrew.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/andrew.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Andrew is a junior at Case Western Reserve University studying Finance and Economics. He is Series 65 certified and manages his own portfolio of equity and options. Andrew began investing when he was 17.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/andrew-ma-68ab30155/" class="partnerName">Andrew Ma</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/daniel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/daniel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/daniel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current sophomore at Colorado College majoring in Computer Science. In his free time, Daniel enjoys coding and mentoring his brother.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/sungKim.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/sungKim.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/sungKim.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Is an undergrad student at Case Western Reserve University that is majoring in Finance. Was in an investment club since high school and now is an Analyst for the Tech group in Case’s investment club, the Weatherhead Fund. Is also involved in the Weatherhead Economic Society.</div>
+                    </div>
+                    <a href="" class="partnerName">Sung Kim</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/vic.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/vic.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/vic.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Victor is a junior at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CGH -->
+      <section id="cgh" class="cgh">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Consumer Goods & Healthcare</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/andrew.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/andrew.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/andrew.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Andrew is a junior at Case Western Reserve University studying Finance and Economics. He is Series 65 certified and manages his own portfolio of equity and options. Andrew began investing when he was 17.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/andrew-ma-68ab30155/" class="partnerName">Andrew Ma</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/rory.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/rory.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/rory.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Rory is a junior at Case Western Reserve University double majoring in Systems & Control Engineering and Finance. In his free time, Rory enjoys running for the varsity cross country and track and field teams at Case Western, reading, and rooting for all New York sports teams.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rory-owens-a54245149/" class="partnerName">Rory Owens</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/vic.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/vic.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/vic.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Victor is a junior at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/johnWen.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/johnWen.png" type="image/jpg" class="profilePic">
+                        <img src="/images/johnWen.png" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">John is a third year student from Case Western Reserve University, majoring in economics in the Pre-professional scholars program in Medicine.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ruiqi-john-wen-276373161/" class="partnerName">John Wen</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- KRATOS -->
+      <section id="kratos" class="kratos">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Kratos</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/zainKhawaja.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/zainKhawaja.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/zainKhawaja.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Zain is a junior premedical student at Case Western Reserve University studying economics. He is an options trader, and uses options as an instrument to generate high returns in bear markets. In his free time, Zain can be found conducting cancer research at Case Western Reserve University’s School of Medicine.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/zainkhawaja/" class="partnerName">Zain Khawaja</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/andrew.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/andrew.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/andrew.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Andrew is a junior at Case Western Reserve University studying Finance and Economics. He is Series 65 certified and manages his own portfolio of equity and options. Andrew began investing when he was 17.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/andrew-ma-68ab30155/" class="partnerName">Andrew Ma</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/connorMcMurry.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/connorMcMurry.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/connorMcMurry.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Connor is a third year computer science major and blockchain research assistant at Case Western Reserve University. Connor manages personal finances of up to $15,000 through the stock market and cryptocurrency investments as well as building cryptocurrency mining rigs, digital currency, and the valuation of digital assets through research guided assessments. </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/connormcmurry/" class="partnerName">Connor McMurry</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/vic.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/vic.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/vic.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Victor is a junior at Case Western Reserve University studying finance and economics. In his free time, Victor enjoys playing soccer and football. He says that founding Hesiod Financial has given him real-world experience by making investment decisions and being held accountable for the outcomes.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/casevictorxie/" class="partnerName">Victor Xie</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/tiger.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/tiger.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/tiger.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Tiger is a junior at Princeton University majoring in Operations Research and Financial Engineering. In his free time, Tiger enjoys playing football and reading history books. As a founding member of Hesiod Financial, he is able to apply the technical and analytical skills required for a career in finance.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/tiger-chen-693048154" class="partnerName">Tiger Chen</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/daniel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/daniel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/daniel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current sophomore at Colorado College majoring in Computer Science. In his free time, Daniel enjoys coding and mentoring his brother.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CRYPTO -->
+      <section id="crypto" class="crypto">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Crypto</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/connorMcMurry.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/connorMcMurry.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/connorMcMurry.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Connor is a third year computer science major and blockchain research assistant at Case Western Reserve University. Connor manages personal finances of up to $15,000 through the stock market and cryptocurrency investments as well as building cryptocurrency mining rigs, digital currency, and the valuation of digital assets through research guided assessments. </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/connormcmurry/" class="partnerName">Connor McMurry</a></br>
+                    <a class="partnerTitle">Portfolio Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/daniel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/daniel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/daniel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Daniel Soares is a current sophomore at Colorado College majoring in Computer Science. In his free time, Daniel enjoys coding and mentoring his brother.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/daniel-soares-889b78172/" class="partnerName">Daniel Soares</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/sungKim.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/sungKim.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/sungKim.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Is an undergrad student at Case Western Reserve University that is majoring in Finance. Was in an investment club since high school and now is an Analyst for the Tech group in Case’s investment club, the Weatherhead Fund. Is also involved in the Weatherhead Economic Society.</div>
+                    </div>
+                    <a href="" class="partnerName">Sung Kim</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/thomasPatton.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/thomasPatton.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/thomasPatton.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Thomas is currently a junior at Case Western Reserve University majoring in Computer Science. He wants to develop a predictive algorithm for Hesoid to increase his knowledge of software craftsmanship as well as gain an understanding of the financial world.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/thomas-patton-281901152/" class="partnerName">Thomas Patton</a></br>
+                    <a class="partnerTitle">General Memeber</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/zainKhawaja.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/zainKhawaja.jpeg" type="image/jpeg" class="profilePic">
+                        <img src="/images/zainKhawaja.jpeg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Zain is a junior premedical student at Case Western Reserve University studying economics. He is an options trader, and uses options as an instrument to generate high returns in bear markets. In his free time, Zain can be found conducting cancer research at Case Western Reserve University’s School of Medicine.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/zainkhawaja/" class="partnerName">Zain Khawaja</a></br>
+                    <a class="partnerTitle">General Member</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- HLABS -->
+      <section id="kratos" class="hlabs">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">HLabs</h2>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/connorMcMurry.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/connorMcMurry.JPG" type="image/JPG" class="profilePic">
+                        <img src="/images/connorMcMurry.JPG" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Connor is a third year computer science major and blockchain research assistant at Case Western Reserve University. Connor manages personal finances of up to $15,000 through the stock market and cryptocurrency investments as well as building cryptocurrency mining rigs, digital currency, and the valuation of digital assets through research guided assessments. </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/connormcmurry/" class="partnerName">Connor McMurry</a></br>
+                    <a class="partnerTitle">Product Manager</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/thomasPatton.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/thomasPatton.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/thomasPatton.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Thomas is currently a junior at Case Western Reserve University majoring in Computer Science. He wants to develop a predictive algorithm for Hesoid to increase his knowledge of software craftsmanship as well as gain an understanding of the financial world.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/thomas-patton-281901152/" class="partnerName">Thomas Patton</a></br>
+                    <a class="partnerTitle">Software Developer</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/ryanTatton.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/ryanTatton.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/ryanTatton.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Ryan is a junior at Case Western Reserve University, majoring in Biomedical Engineering and minoring in Computer Science. He is a former member of the technology sector of Case Western Reserve University's Weatherhead Fund and currently invest personal funds in the stock market.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rdt46/" class="partnerName">Ryan Tatton</a></br>
+                    <a class="partnerTitle">Software Developer</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row partnerRow">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/shaanPatel.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/shaanPatel.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/shaanPatel.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Shaan is a junior at Case Western Reserve University studying Accounting and Computer Science. He was previously involved in the TMT sector of Case Western’s Investment club, and now wants to apply his business and technical skills at Hesiod and an Accounting career.</div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/shaan-patel-a1b190151/" class="partnerName">Shaan Patel</a></br>
+                    <a class="partnerTitle">Software Developer</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 partnerCol">
+                  <div class="partnerSection">
+                    <div class="partnerCol">
+                      <picture>
+                        <source srcset="/images/rakithJayewardene.webp" type="image/webp" class="profilePic">
+                        <source srcset="/images/rakithJayewardene.jpg" type="image/jpg" class="profilePic">
+                        <img src="/images/rakithJayewardene.jpg" class="profilePic">
+                      </picture>
+                      <img src="/images/logo6.png" class="profileLogo">
+                      <div class="bio">Jay is a third-year student at Case Western Reserve University studying Economics and Computer Science with a keen interest in the consolidation of investing through the integration of technical implementations such as software enhancements and quantitative analyses.</div>
+                    </div>
+                    <a href="http://linkedin.com/in/rakith" class="partnerName">Jay Jayewardene</a></br>
+                    <a class="partnerTitle">Software Developer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
+  </body>
+</html>

@@ -19,6 +19,7 @@ body {
   margin-bottom: 17px;
   float: right;
   color: #2b2b2b;
+  cursor: pointer;
 }
 
 /* The side navigation menu */
@@ -137,6 +138,38 @@ section {
   background-color: #fbf7f7;
 }
 
+.csit {
+  background-color: #fbf7f7;
+}
+
+.mei {
+  background-color: #eceaea;
+}
+
+.reit {
+  background-color: #fbf7f7;
+}
+
+.cgh {
+  background-color: #eceaea;
+}
+
+.kratos {
+  background-color: #fbf7f7;
+}
+
+.crypto {
+  background-color: #eceaea;
+}
+
+.hlabs {
+  background-color: #fbf7f7;
+}
+
+.partners {
+  background-color: #fbf7f7;
+}
+
 .contact {
   background-color: #eee !important;
 }
@@ -215,6 +248,7 @@ header .col-lg-4 {
   position: relative;
   text-align: center;
   opacity: 1;
+  margin-bottom: 25px;
 }
 
 .partnerCol:hover {
@@ -245,6 +279,7 @@ header .col-lg-4 {
   position: absolute;
   width: 90% !important;
   color: black;
+  cursor: default;
   font-weight: 400;
   opacity: 0 !important;
   top: 50%;
@@ -289,6 +324,13 @@ header .col-lg-4 {
 .partnerTitle {
   color: black !important;
   font-weight: 400 !important;
+  text-decoration: none;
+  cursor: default;
+}
+
+.partnerTitle:hover {
+  text-decoration: none;
+  cursor: default;
 }
 
 .col-sm-12 .partnerTitle {
@@ -317,6 +359,7 @@ header .col-lg-4 {
 .footerCol {
   display: inline-block;
   text-align: center;
+  width: 100%;
   margin-top: 15px;
 }
 
