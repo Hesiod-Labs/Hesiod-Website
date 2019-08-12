@@ -31,35 +31,13 @@
           </div>
           <div class="col-xs-2 col-sm-2 col-md-3 col-lg-5"></div>
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-4">
-            <!--<ul class="nav navbar-nav navbar-nav-left">
-              <li class="nav-item">
-                <a href="#about" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#investmentStrategy" class="nav-link">Strategy</a>
-              </li>
-              <li class="nav-item">
-                <a href="#partners" class="nav-link">Partners</a>
-              </li>
-              <li class="nav-item">
-                <a href="#hesiodLabs" class="nav-link">Hesoid Labs</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact</a>
-              </li>
-            </ul>-->
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="#home" onclick="closeNav()">Home</a>
-              <!-- <a href="#about" onclick="closeNav()">About</a>
-              <a href="#investmentStrategy" onclick="closeNav()">Strategy</a>
-              <a href="#partners" onclick="closeNav()">Partners</a> -->
-              <!-- <a href="#hesiodLabs" onclick="closeNav()">Hesiod Labs</a> -->
               <a href="/sectors.html" onclick="closeNav()">Sectors</a>
               <a href="/documents.html" onclick="closeNav()">Publications</a>
               <a href="/apply.html" onclick="closeNav()">Apply</a>
               <a href="/fund/login.html" onclick="closeNav()">Login</a>
-              <!-- <a href="#contact" onclick="closeNav()">Contact</a> -->
             </div>
             <span onclick="openNav()"><i class="pull-right fas fa-bars"></i></span>
           </div>
@@ -68,7 +46,9 @@
     </header>
 
     <div class="mainContent">
-      <section id="home" class="home">
+
+      <!-- TITLE -->
+      <section id="homeSection" class="homeSection">
         <div>
           <picture>
             <source srcset="/images/mountain.webp" type="image/webp" class="titlePic">
@@ -78,7 +58,9 @@
           <div class="container homeTitle">Hesiod Financial</div>
         </div>
       </section>
-      <section id="about" class="about">
+
+      <!-- ABOUT -->
+      <section id="aboutSection" class="aboutSection">
         <div class="container">
           <div class="row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -90,7 +72,8 @@
         </div>
       </section>
 
-      <section id="investmentStrategy" class="investmentStrategy">
+      <!-- STRATEGY -->
+      <section id="investmentStrategySection" class="investmentStrategySection">
         <div class="container">
           <div class="row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -102,6 +85,7 @@
         </div>
       </section>
 
+      <!-- BOARD -->
       <section id="partners" class="partners">
         <div class="container">
           <div class="row">
@@ -212,19 +196,34 @@
         </div>
       </section>
 
-      <section id="hesiodLabs" class="hesiodLabs">
+      <!-- KRATOS -->
+      <section id="kratosSection" class="kratosSection">
         <div class="container">
           <div class="row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
             <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-              <h2 align="center">Hesiod Labs</h2>
-              <p> The vision of hLabs is to take on innovative initiatives that employ fintech within Hesiod Financial by consolidating its investment strategies through employing quantitative analyses as well as data-driven prediction algorithms. We combine our quantitative-based design with our software infrastructure to both accelerate and track the firm’s operations.</p>
+              <h2 align="center">Kratos</h2>
+              <p>Kratos is a news and data-driven team inside the fund that favors derivatives as an instrument to capitalize on short-term trades. Our team creates and executes innovative hedging strategies to protect the portfolio from major downside risk.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact">
+      <!-- HLABS -->
+      <section id="hesiodLabsSection" class="hesiodLabsSection">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+              <h2 align="center">Hesiod Labs</h2>
+              <p>The vision of hLabs is to take on innovative initiatives that employ fintech within Hesiod Financial by consolidating its investment strategies through employing quantitative analyses as well as data-driven prediction algorithms. We combine our quantitative-based design with our software infrastructure to both accelerate and track the firm’s operations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contactSection" class="contactSection">
         <div class="container">
           <div class="row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -241,6 +240,7 @@
       </section>
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="row">

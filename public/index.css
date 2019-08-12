@@ -111,31 +111,40 @@ section {
   margin-top: 5px;
 }
 
-.home {
+.homeSection {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.about {
-  background-color: #000 !important;
-  color: #DDD !important;
+.aboutSection {
+  background-color: #000;
+  color: #DDD;
 }
 
-.about p {
+.aboutSection p {
   font-size: 20px;
 }
 
-.investmentStrategy {
-  background-color: #a7a7a7 !important;
-  color: #f9f7f7 !important;
+.investmentStrategySection {
+  background-color: #a7a7a7;
+  color: #f9f7f7;
 }
 
-.investmentStrategy p {
+.investmentStrategySection p {
   font-size: 20px;
 }
 
 .partners {
   background-color: #fbf7f7;
+}
+
+.kratosSection {
+  background-color: #212020;
+  color: #ffffff;
+}
+
+.kratosSection p {
+  font-size: 20px;
 }
 
 .csit {
@@ -166,20 +175,16 @@ section {
   background-color: #fbf7f7;
 }
 
-.partners {
-  background-color: #fbf7f7;
+.contactSection {
+  background-color: #eee;
 }
 
-.contact {
-  background-color: #eee !important;
+.hesiodLabsSection {
+  background-color: #a7a7a7;
+  color: #f9f7f7;
 }
 
-.hesiodLabs {
-  background-color: #a7a7a7 !important;
-  color: #f9f7f7 !important;
-}
-
-.hesiodLabs p {
+.hesiodLabsSection p {
   font-size: 20px;
 }
 
