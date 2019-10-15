@@ -35,6 +35,7 @@ body{
     height: 28px;
     width: 350px;
     color: rgba(0, 0, 0, 0.87);
+    cursor: default;
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
@@ -75,6 +76,7 @@ body{
   color: rgba(0, 0, 0, 0.54);
   opacity: .8;
   float: right;
+  cursor: pointer;
 }
 
 .form-group .field-icon {
@@ -86,6 +88,7 @@ body{
     font-size: 18px;
     color: rgba(34, 34, 34, 0.6);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .login-button .btn {
