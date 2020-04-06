@@ -25,29 +25,35 @@ function initApp() {
 
 window.onload = function() {
   initApp();
-  // drawChart();
 };
 
 
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
-//Chart data
-google.charts.load('current', {packages: ['corechart', 'line']});
-// google.charts.setOnLoadCallback(drawSheetName);
+function drawChart() {
 
-//Spreadsheet
-function drawSheetName() {
   var query = new google.visualization.Query(
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64irmLoTxLYYqlfDtizTK4KilcotAta14TapSWITPhJwy17BqSlPL83maYlPbAgSr37rCSElVXFZk/pubhtml?gid=0&single=true');
+    'https://docs.google.com/spreadsheets/d/1veKg0NhIg5f2dkpvIkGTKl_3VwqKpZfXa3TCDrLFlNk/edit#gid=0/gviz/tq?tq=select%20*%20');
   query.send(handleSampleDataQueryResponse);
-}
 
-function handleSampleDataQueryResponse(response) {
-  if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-    return;
+  function handleSampleDataQueryResponse(response) {
+    if (response.isError()) {
+      alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+      return;
+    }
+
+    var data = response.getDataTable();
+    // Instantiate and draw the chart.
+    var options = {title:'Portfolio Value', 
+                    animation:{
+                      duration: 1000,
+                      startup: true,
+                      easing: 'out',
+                    },
+                    height: 600};
+    var chart = new google.visualization.LineChart(document.getElementById('entireFundChart'));
+    chart.draw(data, options);
   }
 
-  var data = response.getDataTable();
-  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-  chart.draw(data, { height: 400 });
 }

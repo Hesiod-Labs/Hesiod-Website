@@ -140,6 +140,15 @@ section {
   background-color: #fbf7f7;
 }
 
+.sectorsSection {
+  background-color: #a7a7a7;
+  color: #f9f7f7;
+}
+
+.sectorsSection p {
+  font-size: 15px;
+}
+
 .kratosSection {
   background-color: #212020;
   color: #ffffff;
@@ -215,6 +224,11 @@ h2 {
 .partnerSection {
   background-color: white;
   border: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.partnerPicture {
+  margin-bottom: 10px;
 }
 
 .col-sm-12 {
@@ -390,8 +404,33 @@ header .col-lg-4 {
   z-index: 1;
 }
 
+.applicationUpdateSection {
+  padding-top: 10px;
+}
+
+.applicationUpdateDiv {
+  background-color: white;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.applicationUpdateHeader {
+  color: red;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.applicationUpdateP {
+  color: red;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
 .applicationFormSection {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 

@@ -89,20 +89,25 @@ body {
 }
 
 /* On smaller screens, where width is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media and (max-width: 800px) {
+/* @media and (max-width: 800px) {
   .sidenav {padding-top: 15px !important;}
   .sidenav a {font-size: 18px !important;}
   .homeTitle {top: 10% !important;}
   p {font-size: 28px !important;}
-}
+} */
 
 .mainContent {
-  margin-top: 80px;
+  margin-top: 110px;
 }
 
 .mainContent img {
   height: 450px;
   width: 100%;
+}
+
+.entireFundChart {
+  margin: 10px;
+  border: 1px solid gray;
 }
 
 .row {
