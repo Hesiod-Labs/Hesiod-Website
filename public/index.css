@@ -92,14 +92,27 @@ body {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 37%;
+  top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.homeTitle p {
+/* .homeTitle p {
   font-size: 30px;
   text-align: center;
+} */
+.statement {
+  background-color: #212020;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  left: 50%;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  width: 75%;
 }
 
 section {
@@ -416,14 +429,14 @@ header .col-lg-4 {
 }
 
 .applicationUpdateHeader {
-  color: red;
+  color: #078617;
   text-align: center;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
 .applicationUpdateP {
-  color: red;
+  /* color: red; */
   text-align: center;
   margin-bottom: 0px;
   margin-top: 0px;
