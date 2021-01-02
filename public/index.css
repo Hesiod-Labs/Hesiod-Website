@@ -101,19 +101,6 @@ body {
   font-size: 30px;
   text-align: center;
 } */
-.statement {
-  background-color: #212020;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 20px;
-  left: 50%;
-  padding: 5px 10px;
-  position: absolute;
-  text-align: center;
-  top: 85%;
-  transform: translate(-50%, -50%);
-  width: 75%;
-}
 
 section {
   padding-top: 100px;
@@ -213,17 +200,19 @@ section {
 }
 
 .profilePic {
-  width: 100%;
+  border-radius: 8px 8px 0 0;
   height: 100%;
   margin-bottom: 2px;
+  width: 100%;
 }
 
 .profileLogo {
-  width: 100%;
+  border-radius: 8px 8px 0 0;
+  display: none;
   height: 100%;
   margin-bottom: 2px;
   opacity: 0;
-  display: none;
+  width: 100%;
 }
 
 h2 {
@@ -237,6 +226,7 @@ h2 {
 .partnerSection {
   background-color: white;
   border: 1px solid black;
+  border-radius: 8px;
   padding-bottom: 10px;
 }
 
@@ -430,6 +420,7 @@ header .col-lg-4 {
 
 .applicationUpdateHeader {
   color: #078617;
+  /* color: rgb(192, 0, 0); */
   text-align: center;
   margin-bottom: 0px;
   margin-top: 0px;

@@ -49,7 +49,7 @@
               url: url,
               method: "GET",
               dataType: "json",
-              data: form.serializeObject(),
+              data: form.serializeArray(),
               success: function() { window.location = "https://hesiodfinancial.com/success.html"; },
               error: function() { alert("An error occured while prossessing your data, please try again later."); }
             });
@@ -78,8 +78,8 @@
       <section class="applicationUpdateSection">
         <div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
         <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 applicationUpdateDiv">
-          <h3 class="applicationUpdateHeader">Applications are open!</h3>
-          <p class="applicationUpdateP">Applications for the fall recruitment are due by midnight on September 9th.</p>
+          <h3 class="applicationUpdateHeader">Applications are now open!</h3>
+          <p class="applicationUpdateP">Applications for spring recruitment are due by January 30th.</p>
         </div>
       </section>
 
@@ -125,11 +125,11 @@
               <textarea class="form-control applicationFormInput" rows="5" id="comment" placeholder="Please explain your investment experience" name="investmentExperience"></textarea>
             </div>
             <div class="form-group">
-              <label for="whyDoYouWantToJoin" class="applicationFormLabel">Why do you want to join Hesiod?</label>
+              <label for="whyDoYouWantToJoin" class="applicationFormLabel">Why do you want to join Hesiod? (150 words max)</label>
               <textarea class="form-control applicationFormInput" rows="5" id="whyDoYouWantToJoin" placeholder="Please enter why you are interested in joining Hesiod Financial" name="whyDoYouWantToJoin"></textarea>
             </div>
             <div class="form-group">
-              <label for="economicTrend" class="applicationFormLabel">Tell me about an economic/finance-related trend that you have been following. (200 words)</label>
+              <label for="economicTrend" class="applicationFormLabel">Tell me about an economic/finance-related trend that you have been following. (150 words max)</label>
               <textarea class="form-control applicationFormInput" rows="5" id="economicTrend" placeholder="Please describe the economic/finance-related trend" name="economicTrend"></textarea>
             </div>
             <h4 class="applicationFormSectionTitles">More Info</h4>
@@ -141,7 +141,7 @@
               <label for="linkedIn" class="applicationFormLabel">LinkedIn:</label>
               <input type="text" class="form-control applicationFormInput" id="linkedIn" placeholder="Please add a link to your LinkedIn profile" name="linkedIn">
             </div>
-            <button type="submit" class="btn btn-success applicationFormButton" id="submit-form">Submit</button>
+            <button type="submit" class="btn btn-success applicationFormButton" id="submit-form" disabled>Submit</button>
           </form>
         </div>
       </section>

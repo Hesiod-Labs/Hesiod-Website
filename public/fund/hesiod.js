@@ -1,5 +1,4 @@
 function initApp() {
-  console.log('init');
   // Listening for auth state changes.
   // [START authstatelistener]
   firebase.auth().onAuthStateChanged(function(user) {
